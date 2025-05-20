@@ -11,23 +11,18 @@ globs: **/*.py
   1. Standard library imports
   2. Third-party library imports
   3. Local application imports
-
 - Within each group, sort imports by string length (shortest to longest)
-
+- Use absolute imports instead of relative imports
+- Import specific items from modules when possible
+- Avoid using wildcard imports
+- Keep imports at the top of the file, after any module-level docstring
 - Format imports as follows:
   ```python
   # Standard library imports
   import os
   import sys
-  import json
-  import yaml
-  import signal
-  import random
-  import pickle
-  import logging
   import multiprocessing
   from pathlib import Path
-  from types import SimpleNamespace
   from typing import List, Dict, Tuple
   from concurrent.futures import ProcessPoolExecutor
 
@@ -38,13 +33,6 @@ globs: **/*.py
   from sklearn import metrics
 
   # Local imports
-  import utils
-  import bound_param
-  from bound_param import SampleResult, ParameterSet
-  from sparam_to_ew import snp_eyewidth_simulation
+  import my_utils
+  from my_tools import ABC
   ```
-
-- Use absolute imports instead of relative imports
-- Import specific items from modules when possible
-- Avoid using wildcard imports
-- Keep imports at the top of the file, after any module-level docstring
